@@ -1,0 +1,27 @@
+prezentace je notebook
+- lenost nade vse, nechystal jsem nic extra
+- co vse lze s jupyterem delat a vyrostlo tak nejak samo; zacal jsem od vlastniho bordelu
+
+gromacs podle tutorialu
+
+kam s nim? -> jupyterhub
+
+sluzba pro svet - metadynminer
+- jupyterhub pro nase uzivatele
+- binder k publikaci
+
+vice kontejneru
+- mix software a bumbrlicci
+- alokace zdroju
+
+horici bordel - auranofin
+- ucesana verze od Vlada z projektu
+- mohu si ji pohackovat, rychle neco udelat (10 dnu ve Florencii -> OSCARS)
+
+GUI pro lamy
+- jupyter widgets, voila
+- spojita cesta od bunch of hacks
+
+
+nejsem v tom sam
+- EOSC data commons: galaxy a notebooky
