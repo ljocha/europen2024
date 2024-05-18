@@ -38,4 +38,6 @@ RUN cd /tmp && git clone --single-branch -b k8s https://github.com/ljocha/Gromac
 
 USER ${NB_USER}
 
+COPY bla.ipynb pbc.xtc Prezentace-slide-einfra2.png /home/jovyan/
+
 
