@@ -1,5 +1,5 @@
 image=cerit.io/ljocha/europen2024
-tag=1
+tag=2
 
 port=9000
 
