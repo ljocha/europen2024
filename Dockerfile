@@ -34,23 +34,8 @@ COPY --from=gmx /gromacs /gromacs
 RUN ldconfig
 
 RUN pip install jupyterlab_rise
-
-# ENV css=/opt/conda/lib/python3.11/site-packages/rise/static/reveal.js/css/theme
-#ENV css=/opt/conda/share/jupyter/nbextensions/rise/reveal.js/css/theme
-# COPY ljocha.scss ${css}/source
-# RUN cd ${css} && sassc source/ljocha.scss solarized.css
-#RUN cd ${css}/source && cp solarized.scss ljocha.scss
-
-RUN apt update && apt install -y strace && apt clean && rm -rf /var/lib/apt/lists/*
+RUN cd /tmp && git clone --single-branch -b k8s https://github.com/ljocha/GromacsWrapper.git && pip install ./GromacsWrapper && rm -rf GromacsWrapper
 
 USER ${NB_USER}
 
-RUN cd /tmp && git clone --single-branch -b k8s https://github.com/ljocha/GromacsWrapper.git && pip install ./GromacsWrapper && rm -rf GromacsWrapper
 
-#RUN cd /tmp && git clone --branch v0.42.0 https://github.com/jupyterlab-contrib/rise.git 
-#RUN cd /tmp/rise && pip install -e ".[test]" && jupyter labextension develop . --overwrite
-#RUN jupyter server extension enable jupyterlab_rise
-#RUN cd /tmp/rise && jlpm build
-
-RUN mkdir -p ${HOME}/.jupyter/custom
-COPY custom.css ${HOME}/.jupyter/custom
