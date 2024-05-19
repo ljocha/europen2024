@@ -33,11 +33,12 @@ COPY --from=gmx /gromacs /gromacs
 
 RUN ldconfig
 
-RUN pip install jupyterlab_rise
+RUN pip install jupyterlab_rise plotly
 RUN cd /tmp && git clone --single-branch -b k8s https://github.com/ljocha/GromacsWrapper.git && pip install ./GromacsWrapper && rm -rf GromacsWrapper
 
 USER ${NB_USER}
 
-COPY bla.ipynb pbc.xtc Prezentace-slide-einfra2.png /home/jovyan/
+
+COPY bla.ipynb pbc.xtc 6pxm-box.gro Prezentace-slide-einfra2.png /home/jovyan/
 
 
